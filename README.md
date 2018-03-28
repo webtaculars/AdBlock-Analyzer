@@ -1,35 +1,39 @@
 ## Welcome to Adanalyzer
 
-Analytics for the ad revenue which is getting blocked by adblocker.  
+Analytics for the ad revenue which is getting blocked by adblocker, integrated with Google Analytics.  
 
-### Markdown
+### How to implement adanalyzer with google analytics
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+Create a new file `ads.js` in the root directory of the website and paste the below code within it. 
 ```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+var a=document.createElement('div');a.id='someRandomId';a.style.display='none';document.body.appendChild(a);
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+Paste the following code within your website's HTML source code just above the `</body>` tag.
+```markdown
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/webtaculars/adanalyzer/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+<script src="ads.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+if(document.getElementById('someRandomId')) {
+  someRandomId='false';
+} else {
+  someRandomId='true';
+}
+
+if(typeof ga !=='undefined') {
+  ga('send','event','Adblock enabled',someRandomId,{'nonInteraction':1});
+} else if(typeof _gaq !=='undefined') {
+  _gaq.push(['_trackEvent','Adblock enabled',someRandomId,undefined,undefined,true]);
+}
+
+</script>
+
+```
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Having trouble with the script? Create a [new issue](https://github.com/webtaculars/adanalyzer/issues/new) or [connect on Twitter](https://twitter.com/ag251994) and we’ll help you sort it out.
