@@ -1,6 +1,6 @@
 ## Welcome to Adanalyzer
 
-Find out how many of your visitors are blocking your ad revenue.
+Analytics for the ad revenue which is getting blocked by adblocker.  
 
 ### Markdown
 
