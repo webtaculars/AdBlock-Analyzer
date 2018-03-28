@@ -1,8 +1,6 @@
-## Welcome to GitHub Pages
+## Welcome to Adanalyser
 
-You can use the [editor on GitHub](https://github.com/webtaculars/adanalyzer/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Find out how many of your visitors are blocking your ad revenue.
 
 ### Markdown
 
