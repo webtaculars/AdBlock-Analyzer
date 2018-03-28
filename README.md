@@ -1,4 +1,4 @@
-## Welcome to Adanalyser
+## Welcome to Adanalyzer
 
 Find out how many of your visitors are blocking your ad revenue.
 
